@@ -21,6 +21,10 @@ loop do
   break if @rolls.sum >= 55
 end
 
-@rolls << roll
+if (24..30).include?(@k30_roll2)
+  @rolls << 25
+else
+  @rolls << roll
+end
 
 puts @rolls
