@@ -1,10 +1,15 @@
 def roll
   rand(1..20)
 end
-
 rolls = []
-7.times do
-  rolls << roll
+
+loop do
+  rolls = []
+  7.times do
+    rolls << roll
+  end
+  rolls = rolls - rolls.minmax
+  break if rolls.sum >= 55
 end
 
-puts rolls - rolls.minmax
+puts rolls
