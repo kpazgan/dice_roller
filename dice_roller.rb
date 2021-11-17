@@ -12,4 +12,6 @@ loop do
   break if rolls.sum >= 55
 end
 
+rolls << roll
+
 puts rolls
