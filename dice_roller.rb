@@ -3,8 +3,8 @@ def roll(range=1..20)
 end
 
 def dice_roller
-    k30_roll1 = roller(1, 1..30)
-    if k30_roll1 >= 1 && k30_roll1 <= 7
+    k30_roll1 = roll(1..30)
+    if (1..7).include?(k30_roll1)
       @k30_roll2 = roll(1..30)
     end
 
