@@ -1,4 +1,6 @@
 class DiceRoller
+  attr_accessor :num_of_rolls, :expected_rolls_value
+
   def initialize(num_of_rolls, expected_rolls_value)
     @num_of_rolls = num_of_rolls
     @expected_rolls_value = expected_rolls_value
@@ -9,7 +11,7 @@ class DiceRoller
 
     loop do
       @rolls = []
-      @num_of_rolls.times do
+      num_of_rolls.times do
         @rolls.push(roll)
       end
 
@@ -22,7 +24,7 @@ class DiceRoller
       end
 
       
-      break if @rolls.sum >= @expected_rolls_value
+      break if @rolls.sum >= expected_rolls_value
     end
 
     @rolls.push(roll)
